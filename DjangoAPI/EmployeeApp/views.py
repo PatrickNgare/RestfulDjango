@@ -38,7 +38,19 @@ def deparmentApi(request,id=0):
 
     
     elif request.method == 'DELETE':
-        
+
+        department=Departments.objects.get(DepartmentId=id)
+        department.delete()
+        return JsonResponse("Record Delected Scuccesfully",safe=False)
+    
+
+    else:
+
+        return JsonResponse("Invalid request",safe=False)
+
+    
+rce 
+
 
 
 
