@@ -23,7 +23,7 @@ def deparmentApi(request,id=0):
         if departments_serializer.is_valid():
             departments_serializer.save()
             return JsonResponse("added Record successfuly",safe=False)
-        return JsonResponse("falijed to add recosrd",safe=False)
+        return JsonResponse("failed to add record",safe=False)
      
     elif request.method=='PUT':
 
@@ -41,7 +41,7 @@ def deparmentApi(request,id=0):
 
         department=Departments.objects.get(DepartmentId=id)
         department.delete()
-        return JsonResponse("Record Delected Scuccesfully",safe=False)
+        return JsonResponse("Record Deleted Scuccesfully",safe=False)
     
 
     else:
@@ -49,7 +49,7 @@ def deparmentApi(request,id=0):
         return JsonResponse("Invalid request",safe=False)
 
     
-rce 
+
 
 
 
