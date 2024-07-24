@@ -27,7 +27,7 @@ def deparmentApi(request,id=0):
      
     elif request.method=='PUT':
 
-        department_data = JsonResponse().parse(request)
+        department_data = JSONParser().parse(request)
         deparment=Departments.objects.get(DepartmentId=department_data['DepartmentId'])
         departments_serializer=DepartmentSerializer(deparment,data=department_data)
         if departments_serializer.is_valid():
